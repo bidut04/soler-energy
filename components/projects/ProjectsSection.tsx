@@ -46,7 +46,7 @@ export const ProjectsSection: React.FC = () => {
         </div>
 
         {/* View full portfolio CTA */}
-        <div className="text-center pt-6">
+        <div className="text-center pt-3">
           <Button
             variant="outline"
             size="lg"

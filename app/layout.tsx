@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Roboto_Slab } from 'next/font/google';
 import './globals.css';
 import { QuoteModalProvider } from '@/components/layout/QuoteModalContext';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
@@ -7,6 +8,13 @@ import { Footer } from '@/components/layout/Footer';
 import { QuoteModal } from '@/components/cta/QuoteModal';
 import { FloatingStickyCTA } from '@/components/cta/FloatingStickyCTA';
 import { CustomCursor } from '@/components/ui/CustomCursor';
+
+const robotoSlab = Roboto_Slab({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-roboto-slab',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'SolarNext | Smart Solar Energy Engineering & Turnkey EPC Solutions',
@@ -75,14 +83,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={`scroll-smooth ${robotoSlab.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-white text-slate-900 antialiased selection:bg-emerald-500 selection:text-white">
+      <body className={`min-h-screen bg-white text-slate-900 antialiased selection:bg-emerald-500 selection:text-white ${robotoSlab.className}`}>
         <CustomCursor />
         <SmoothScrollProvider>
           <QuoteModalProvider>

@@ -4,7 +4,7 @@ import { InteractiveCalculator } from './InteractiveCalculator';
 
 export const SolarCalculatorCTA: React.FC = () => {
   return (
-    <section id="calculator" className="py-16 lg:py-24 bg-white text-slate-900 border-t border-slate-100 relative">
+    <section id="calculator" className="py-5 lg:py-7 bg-white text-slate-900 border-t border-slate-100 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
         {/* Header */}
