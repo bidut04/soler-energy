@@ -7,6 +7,7 @@ import { ProjectFilterTabs } from './ProjectFilterTabs';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { ArrowRight } from 'lucide-react';
+import { ScrollTextAnimation } from '@/components/ui/ScrollTextAnimation';
 
 export const ProjectsSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
@@ -19,8 +20,8 @@ export const ProjectsSection: React.FC = () => {
     <section className="py-5 lg:py-7 bg-white border-t border-slate-100 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
+        {/* Section Header with GSAP ScrollTrigger */}
+        <ScrollTextAnimation animationType="fadeUp" className="text-center max-w-3xl mx-auto space-y-4">
           <Badge variant="emerald">PORTFOLIO EXCELLENCE</Badge>
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
             Projects That Power Progress
@@ -36,7 +37,7 @@ export const ProjectsSection: React.FC = () => {
               onSelectCategory={(cat) => setActiveCategory(cat)}
             />
           </div>
-        </div>
+        </ScrollTextAnimation>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
