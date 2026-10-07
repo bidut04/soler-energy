@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useQuoteModal } from '@/components/layout/QuoteModalContext';
 import { Flame } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -38,13 +39,13 @@ export const FloatingStickyCTA: React.FC = () => {
               alt="Arrow pointing to Book Now button"
               className="w-12 h-12 sm:w-14 sm:h-14 object-contain shrink-0 filter brightness-0 opacity-85 drop-shadow-[0_2px_6px_rgba(0,0,0,0.3)] transition-transform group-hover:translate-x-1.5 group-hover:scale-110"
             />
-            <button
-              onClick={() => openQuoteModal('commercial')}
+            <Link
+              href="/quote"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold text-xs sm:text-sm px-5 py-3 rounded-full shadow-2xl shadow-emerald-950/40 border border-white/30 backdrop-blur-md transition-all duration-300 active:scale-95 hover:scale-105 cursor-pointer"
             >
               <span className="w-2.5 h-2.5 rounded-full bg-amber-300 animate-ping shrink-0" />
               <span className="tracking-wide">Book Now</span>
-            </button>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

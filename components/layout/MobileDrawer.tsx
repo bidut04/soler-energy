@@ -99,16 +99,14 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
 
             {/* Footer CTAs */}
             <div className="pt-6 border-t border-slate-100 space-y-4">
-              <button
-                onClick={() => {
-                  onClose();
-                  onOpenQuote();
-                }}
+              <Link
+                href="/quote"
+                onClick={onClose}
                 className="w-full group inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm px-6 py-3 rounded-full shadow-md shadow-emerald-600/30 transition-all duration-300 cursor-pointer active:scale-95"
               >
                 <span>Book Now</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
 
               <div className="space-y-2 text-xs text-slate-500 pt-2">
                 <div className="flex items-center gap-2">

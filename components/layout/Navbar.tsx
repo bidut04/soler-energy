@@ -104,22 +104,22 @@ export const Navbar: React.FC = () => {
               >
                 Estimate Savings
               </Button>
-              <button
-                onClick={() => openQuoteModal()}
+              <Link
+                href="/quote"
                 className="inline-flex items-center justify-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs px-4 py-2 rounded-full shadow-md shadow-emerald-600/20 transition-all duration-300 cursor-pointer active:scale-95 hover:scale-[1.02]"
               >
                 <span>Book Now</span>
-              </button>
+              </Link>
             </div>
 
             {/* Mobile Hamburger Toggle */}
             <div className="flex lg:hidden items-center gap-2">
-              <button
-                onClick={() => openQuoteModal()}
+              <Link
+                href="/quote"
                 className="sm:hidden inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-emerald-600 text-white text-xs font-extrabold rounded-full shadow-xs active:scale-95 transition-transform"
               >
                 <span>Book Now</span>
-              </button>
+              </Link>
               <button
                 onClick={() => setIsMobileOpen(true)}
                 className="p-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-emerald-700 hover:bg-slate-50 transition-colors"

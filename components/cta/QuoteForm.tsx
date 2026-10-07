@@ -67,10 +67,10 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 text-left">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <form onSubmit={handleSubmit} className="space-y-3 text-left">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
             Full Name *
           </label>
           <input
@@ -80,12 +80,12 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
             placeholder="e.g. Robert Vance"
             value={formData.fullName}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
+            className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
             Phone Number *
           </label>
           <input
@@ -95,14 +95,14 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
             placeholder="+1 (555) 019-2834"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
+            className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
             Email Address *
           </label>
           <input
@@ -112,19 +112,19 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
             placeholder="robert@company.com"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
+            className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
             Project Category *
           </label>
           <select
             name="projectType"
             value={formData.projectType}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
+            className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
           >
             <option value="residential">Residential Solar (Home)</option>
             <option value="commercial">Commercial Solar (Office/Business)</option>
@@ -135,7 +135,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       </div>
 
       <div>
-        <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+        <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
           Property Address / Project Location *
         </label>
         <input
@@ -145,20 +145,20 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
           placeholder="Street Address, City, State/Province"
           value={formData.propertyAddress}
           onChange={handleChange}
-          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
+          className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
-          <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
             Estimated Monthly Power Bill
           </label>
           <select
             name="estimatedMonthlyBill"
             value={formData.estimatedMonthlyBill}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
+            className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
           >
             <option value="under-300">Under $300 / mo</option>
             <option value="300-1000">$300 - $1,000 / mo</option>
@@ -168,14 +168,14 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+          <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
             Implementation Timeline
           </label>
           <select
             name="timeline"
             value={formData.timeline}
             onChange={handleChange}
-            className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
+            className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
           >
             <option value="immediate">Immediate (Ready to install)</option>
             <option value="1-3-months">Within 1 to 3 months</option>
@@ -186,31 +186,31 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
       </div>
 
       <div>
-        <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+        <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
           Additional Project Notes (Optional)
         </label>
         <textarea
           name="additionalDetails"
-          rows={3}
+          rows={2}
           placeholder="Roof type (Tin/Concrete/Tile), available land area, specific battery backup needs..."
           value={formData.additionalDetails}
           onChange={handleChange}
-          className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
+          className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:bg-white transition-colors"
         />
       </div>
 
       <Button
         type="submit"
         variant="primary"
-        size="lg"
+        size="md"
         disabled={isSubmitting}
-        className="w-full mt-2"
+        className="w-full mt-1 py-2.5 text-xs sm:text-sm"
         icon={<ArrowRight className="w-4 h-4" />}
       >
         {isSubmitting ? 'Processing Quote Request...' : 'Submit Engineering Quote Request'}
       </Button>
 
-      <p className="text-[11px] text-center text-slate-500 mt-2">
+      <p className="text-[10px] text-center text-slate-500 mt-1">
         🔒 100% Privacy guaranteed. Zero spam. We protect your project details.
       </p>
     </form>

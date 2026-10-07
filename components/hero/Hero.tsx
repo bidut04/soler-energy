@@ -2,14 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Zap, TrendingUp, Leaf, LayoutGrid, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
-import { useQuoteModal } from '@/components/layout/QuoteModalContext';
 
 export const Hero: React.FC = () => {
-  const { openQuoteModal } = useQuoteModal();
-
   return (
     <section className="relative min-h-[92vh] sm:min-h-screen pt-16 sm:pt-15 lg:pt-22 overflow-hidden flex flex-col justify-between">
 
@@ -79,13 +77,13 @@ export const Hero: React.FC = () => {
                   alt="Arrow pointing to Book Now"
                   className="w-14 h-14 sm:w-18 sm:h-18 lg:w-20 lg:h-20 object-contain shrink-0 filter brightness-0 opacity-75 drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)] transition-transform group-hover:translate-x-2 group-hover:scale-110"
                 />
-                <button
-                  onClick={() => openQuoteModal('commercial')}
+                <Link
+                  href="/quote"
                   className="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm sm:text-base px-7 py-3 rounded-full shadow-lg shadow-emerald-600/30 transition-all duration-300 cursor-pointer active:scale-95 hover:scale-[1.02]"
                 >
                   <Zap className="w-4 h-4 fill-amber-300 text-amber-300" />
                   <span className="tracking-wide">Book Now</span>
-                </button>
+                </Link>
               </div>
 
               <Button
@@ -167,7 +165,7 @@ export const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="relative z-10 w-full pt-1 pb-16 sm:pb-20 lg:pb-22"
+        className="relative z-10 w-full pt-1 pb-18 sm:pb-22 lg:pb-28"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-white text-left divide-y md:divide-y-0 md:divide-x divide-white/10">
@@ -216,14 +214,14 @@ export const Hero: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Curved Wave Bottom SVG */}
+      {/* Enhanced Curved Wave Bottom SVG */}
       <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-20 pointer-events-none">
         <svg
-          className="relative block w-full h-10 sm:h-12 lg:h-14 text-white fill-current"
+          className="relative block w-full h-16 sm:h-20 lg:h-28 text-white fill-current"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
-          <path d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,40 L1200,120 L0,120 Z" />
+          <path d="M0,0 C200,120 400,-20 600,70 C800,160 1000,10 1200,60 L1200,120 L0,120 Z" />
         </svg>
       </div>
 

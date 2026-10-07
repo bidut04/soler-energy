@@ -8,7 +8,7 @@ import { ScrollTextAnimation } from '@/components/ui/ScrollTextAnimation';
 
 export const FinalCTA: React.FC = () => {
   return (
-    <section className="py-16 lg:py-20 bg-gradient-to-br from-emerald-50 via-white to-emerald-50 text-slate-900 relative overflow-hidden border-t border-slate-200/80">
+    <section className="pt-6 pb-12 lg:pt-8 lg:pb-16 bg-gradient-to-br from-emerald-50 via-white to-emerald-50 text-slate-900 relative overflow-hidden border-t border-slate-200/80">
       {/* Soft Ambient Green Glows */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -17,11 +17,11 @@ export const FinalCTA: React.FC = () => {
         <Badge variant="emerald">
           READY TO LOWER YOUR ENERGY COSTS?
         </Badge>
-        
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 max-w-3xl mx-auto">
+
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 max-w-3xl mx-auto">
           Start Your Solar Transition With Certified EPC Engineers
         </h2>
-        
+
         <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
           Get a comprehensive site assessment, 3D solar design modeling, and a customized financial ROI proposal for your commercial or residential property.
         </p>
@@ -35,7 +35,7 @@ export const FinalCTA: React.FC = () => {
             Calculate Solar Savings
             <ArrowRight className="w-4 h-4" />
           </Link>
-          
+
           <Link
             href="/quote"
             className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-300 shadow-xs transition-all duration-200 flex items-center justify-center gap-2"
